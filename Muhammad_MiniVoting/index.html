@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Voting App - Choose Our Next Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header Application -->
+    <header>
+      <h1>🚀 Choose Our Next Coding Project!</h1>
+      <p>Pilih proyek menarik yang ingin kamu bangun bersama di kelas Web Programming.</p>
+    </header>
+
+    <!-- Feedback Message / Alert -->
+    <div id="feedbackMessage" class="feedback hidden"></div>
+
+    <!-- Current Winner Card (Bonus) -->
+    <div class="winner-card">
+      <h3>🏆 Leaderboard Saat Ini</h3>
+      <p id="winnerText">Belum ada vote yang masuk</p>
+    </div>
+
+    <!-- Candidate Grid -->
+    <main class="voting-grid">
+      <!-- Candidate 1 -->
+      <div class="candidate-card" id="card-1">
+        <div class="emoji">🎮</div>
+        <h2>Mini Game</h2>
+        <p class="votes-info"><span id="votes-1">0</span> Votes (<span id="percent-1">0%</span>)</p>
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-1" style="width: 0%;"></div>
+        </div>
+
+        <button class="btn btn-vote" id="btn-vote-1" onclick="castVote(1, 'Mini Game')">🗳️ VOTE</button>
+      </div>
+
+      <!-- Candidate 2 -->
+      <div class="candidate-card" id="card-2">
+        <div class="emoji">🛒</div>
+        <h2>Mini Store</h2>
+        <p class="votes-info"><span id="votes-2">0</span> Votes (<span id="percent-2">0%</span>)</p>
+        
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-2" style="width: 0%;"></div>
+        </div>
+
+        <button class="btn btn-vote" id="btn-vote-2" onclick="castVote(2, 'Mini Store')">🗳️ VOTE</button>
+      </div>
+
+      <!-- Candidate 3 -->
+      <div class="candidate-card" id="card-3">
+        <div class="emoji">📝</div>
+        <h2>To-Do App</h2>
+        <p class="votes-info"><span id="votes-3">0</span> Votes (<span id="percent-3">0%</span>)</p>
+        
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-3" style="width: 0%;"></div>
+        </div>
+
+        <button class="btn btn-vote" id="btn-vote-3" onclick="castVote(3, 'To-Do App')">🗳️ VOTE</button>
+      </div>
+
+      <!-- Candidate 4 -->
+      <div class="candidate-card" id="card-4">
+        <div class="emoji">🧠</div>
+        <h2>Quiz App</h2>
+        <p class="votes-info"><span id="votes-4">0</span> Votes (<span id="percent-4">0%</span>)</p>
+        
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-4" style="width: 0%;"></div>
+        </div>
+
+        <button class="btn btn-vote" id="btn-vote-4" onclick="castVote(4, 'Quiz App')">🗳️ VOTE</button>
+      </div>
+    </main>
+
+    <!-- Footer Controls -->
+    <footer>
+      <div class="total-box">
+        📊 Total Votes: <strong id="totalVotes">0</strong>
+      </div>
+      <button class="btn btn-reset" id="btnReset">🔄 RESET VOTING</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
